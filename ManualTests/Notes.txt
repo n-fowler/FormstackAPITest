@@ -17,3 +17,7 @@ I used the page at https://developers.formstack.com/docs/form-id-copy-post to cr
 Scenario: Delete the copied form from the account
 
 I used the page at https://developers.formstack.com/docs/form-id-delete to create the postman
+
+Additional Notes:
+
+I updated the API to add a deleteForm method for the last test

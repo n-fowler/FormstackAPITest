@@ -114,6 +114,25 @@ class FormstackApi {
         return $copiedForm;
     }
     /**
+     * Delete a form in your account.
+     * 
+     * @link    https://www.developers.formstack.com/docs/form-id-delete
+     * 
+     * @param   int     $formId     The ID of the Form to delete
+     * 
+     * @throws  Exception           If the Form ID is not numeric
+     * 
+     * @return  object  $deletedForm A \stdClass representing all of the deleted forms data
+     */
+    public function deleteForm($formId){
+        if(!is_numeric($formId)) {
+            throw new Exception('Form ID must be numeric');
+        }
+        $responseJson = $this->request('form/' . $formId, 'DELETE');
+        $deletedForm = json_decode($responseJson);
+        return $deletedForm;
+    }
+    /**
      * Get all Submissions for a specific Form
      *
      * @link    https://www.formstack.com/developers/api/resources/submission#form/:id/submission_GET

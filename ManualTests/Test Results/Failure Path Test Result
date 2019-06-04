@@ -1,4 +1,4 @@
 Failure Path Test Results
 
-These are automated so I won't list them here twice.
-The failure jsons match the api documentation.
+I didn't bother listing the exceptions as there's not much to list here.
+There's a failure status and sometimes an error message describing the failure.

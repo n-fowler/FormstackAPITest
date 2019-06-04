@@ -1,0 +1,29 @@
+Test Results
+
+Scenario: Get all forms on the account
+
+Request URL: https://www.formstack.com/api/v2/form.json?
+Query String: folders=false&oauth_token=<token>
+Response Code: 200 OK
+Response (JSON): GetAllForms.json
+
+Scenario: Get a specific form on the account
+
+Request URL: https://www.formstack.com/api/v2/form/3475952.json?
+Query String: oauth_token=<token>
+Response Code:200 OK
+Response (JSON): GetSpecificForm.json
+
+Scenario: Copy a form from the account
+
+Request URL:
+Query String:
+Response Code:
+Response (JSON): CopyForm.Json
+
+Scenario: Delete the copied form from the account
+
+Request URL:
+Query String:
+Response Code:
+Response (JSON): DeleteForm.json

@@ -16,14 +16,14 @@ Response (JSON): GetSpecificForm.json
 
 Scenario: Copy a form from the account
 
-Request URL:
-Query String:
-Response Code:
+Request URL: https://www.formstack.com/api/v2/form/3475952/copy.json?
+Query String: oauth_token=<token>
+Response Code: 201 Created
 Response (JSON): CopyForm.Json
 
 Scenario: Delete the copied form from the account
 
-Request URL:
-Query String:
-Response Code:
+Request URL:https://www.formstack.com/api/v2/form/3476402.json?
+Query String: oauth_token=<token>
+Response Code: 200 OK
 Response (JSON): DeleteForm.json

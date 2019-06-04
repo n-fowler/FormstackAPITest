@@ -1,0 +1,153 @@
+{
+	"variables": [],
+	"info": {
+		"name": "FormstackAPITests",
+		"_postman_id": "90f24f1c-335c-89c2-5744-d365e96dcef8",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "FormstackGetAllForms",
+			"request": {
+				"url": {
+					"raw": "https://www.formstack.com/api/v2/form.json?folders=false&oauth_token=<token>",
+					"protocol": "https",
+					"host": [
+						"www",
+						"formstack",
+						"com"
+					],
+					"path": [
+						"api",
+						"v2",
+						"form.json"
+					],
+					"query": [
+						{
+							"key": "folders",
+							"value": "false",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "oauth_token",
+							"value": "<token>",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "Gets all forms from Formstack API for test account"
+			},
+			"response": []
+		},
+		{
+			"name": "FormstackGetSpecificForm",
+			"request": {
+				"url": {
+					"raw": "https://www.formstack.com/api/v2/form/3475952.json?oauth_token=<token>",
+					"protocol": "https",
+					"host": [
+						"www",
+						"formstack",
+						"com"
+					],
+					"path": [
+						"api",
+						"v2",
+						"form",
+						"3475952.json"
+					],
+					"query": [
+						{
+							"key": "oauth_token",
+							"value": "<token>",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "Gets a specific form for the account"
+			},
+			"response": []
+		},
+		{
+			"name": "FormstackCopyForm",
+			"request": {
+				"url": {
+					"raw": "https://www.formstack.com/api/v2/form/3475952/copy.json?oauth_token=<token>",
+					"protocol": "https",
+					"host": [
+						"www",
+						"formstack",
+						"com"
+					],
+					"path": [
+						"api",
+						"v2",
+						"form",
+						"3475952",
+						"copy.json"
+					],
+					"query": [
+						{
+							"key": "oauth_token",
+							"value": "<token>",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "POST",
+				"header": [],
+				"body": {},
+				"description": "Copies a form from the account"
+			},
+			"response": []
+		},
+		{
+			"name": "FormstackDeleteCopiedForm",
+			"request": {
+				"url": {
+					"raw": "https://www.formstack.com/api/v2/form/3476421.json?oauth_token=<token>",
+					"protocol": "https",
+					"host": [
+						"www",
+						"formstack",
+						"com"
+					],
+					"path": [
+						"api",
+						"v2",
+						"form",
+						"3476421.json"
+					],
+					"query": [
+						{
+							"key": "oauth_token",
+							"value": "<token>",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"description": "Deletes the copied form"
+			},
+			"response": []
+		}
+	]
+}

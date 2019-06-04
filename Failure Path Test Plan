@@ -1,0 +1,67 @@
+Failure Path Test Plan
+
+Scenario: Get all forms on the account
+
+Given I made a GET request to the url: <url> with the query string <query string>
+When I supply a valid page number
+Then I get a successful response
+And I receive a specific JSON Response <json response>
+
+Given I made a GET request to the url: <url> with the query string <query string>
+When I supply an invalid page number
+Then I get a 400 Bad Request
+And I get an error: "Invalid page value specified"
+
+Scenario: Get a specific form on the account
+
+Given I made a GET request to the url: <url> with the query string <query string>
+When I supply a 0 for the form ID
+Then I get a 405 Method not allowed response
+
+Given I made a GET request to the url: <url> with the query string <query string>
+When I fail to supply anything for the form ID
+Then I get a 400 Form ID not specified response
+
+Given I made a GET request to the url: <url> with the query string <query string>
+When I supply a form id that doesn't exist
+Then I get a 404 form not found response
+
+Given I made a GET request to the url: <url> with the query string <query string>
+When I supply a form id that exists but doesn't belong to my account
+Then I get a 403 forbidden action response
+
+Scenario: Copy a form from the account
+
+Given I made a POST request to the url: <url> with the query string <query string>
+When I supply a 0 for the form ID
+Then I get a 405 Method not allowed response
+
+Given I made a POST request to the url: <url> with the query string <query string>
+When I fail to supply anything for the form ID
+Then I get a 400 Form ID not specified response
+
+Given I made a POST request to the url: <url> with the query string <query string>
+When I supply a form id that doesn't exist
+Then I get a 404 form not found response
+
+Given I made a POST request to the url: <url> with the query string <query string>
+When I supply a form id that exists but doesn't belong to my account
+Then I get a 403 forbidden action response
+
+Scenario: Delete the copied form from the account
+
+Given I made a DELETE request to the url: <url> with the query string <query string>
+When I supply a 0 for the form ID
+Then I get a 405 Method not allowed response
+
+Given I made a DELETE request to the url: <url> with the query string <query string>
+When I fail to supply anything for the form ID
+Then I get a 400 Form ID not specified response
+
+Given I made a DELETE request to the url: <url> with the query string <query string>
+When I supply a form id that doesn't exist
+Then I get a 404 form not found response
+
+Given I made a DELETE request to the url: <url> with the query string <query string>
+When I supply a form id that exists but doesn't belong to my account
+Then I get a 403 forbidden action response

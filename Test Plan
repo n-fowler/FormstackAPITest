@@ -1,0 +1,31 @@
+Test Plan
+
+Scenario: Get all forms on the account
+
+Given I made a GET request to the url: <url> with the query string <query string>
+When I receive a successful response
+Then the form: “TestForm” is listed
+And the form: “TestFormTwo” is listed
+And I receive a specific JSON Response <json response>
+
+Scenario: Get a specific form on the account
+
+Given I made a GET request to the url: <url> with the query string <query string>
+When I receive a successful response
+Then the form: “TestForm” is listed
+And I receive a specific JSON Response <json response>
+
+Scenario: Copy a form from the account
+
+Given I made a POST request to the url: <url> with the query string <query string>
+When I receive a successful response
+Then the form: “TestFormTwo” has been copied
+And I receive a specific JSON Response <json response>
+
+Scenario: Delete the copied form from the account
+
+Given I made a DELETE request to the url: <url> with the query string <query string>
+When I receive a successful response
+Then the form: “TestFormTwoCopy” has been deleted
+And the form: “TestFormTwo” has been kept
+And I receive a specific JSON Response <json response>

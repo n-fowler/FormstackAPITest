@@ -1,0 +1,19 @@
+I used postman to perform manual testing.
+
+Scenario: Get all forms on the account
+
+I used the page at https://developers.formstack.com/docs/form-get to create the postman
+PostmanCreationExample.png shows the postman creation.  Other postmans follow this basic format.
+The full postman is also stored in ManualTests > Postman with the oauth token removed
+
+Scenario: Get a specific form on the account
+
+I used the page at https://developers.formstack.com/docs/form-id-get to create the postman
+
+Scenario: Copy a form from the account
+
+I used the page at https://developers.formstack.com/docs/form-id-copy-post to create the postman
+
+Scenario: Delete the copied form from the account
+
+I used the page at https://developers.formstack.com/docs/form-id-delete to create the postman
